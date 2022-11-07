@@ -1,0 +1,42 @@
+{
+  "name": "configs",
+  "version": "1.0.4",
+  "description": "Personal collection of configs for all things configurable",
+  "author": "Lioness100",
+  "license": "Apache-2.0",
+  "types": "index.d.ts",
+  "files": [
+    "tsup.config.js",
+    "tsconfig.json",
+    ".prettierrc.json",
+    ".eslintrc.json"
+  ],
+  "scripts": {
+    "prepare": ""
+  },
+  "exports": {
+    "./tsconfig": "./tsconfig.json",
+    "./prettier": "./.prettierrc.json"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "eslint": "^8.27.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.4.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-sonarjs": "^0.16.0",
+    "eslint-plugin-typescript-sort-keys": "^2.1.0",
+    "eslint-plugin-unicorn": "^44.0.2",
+    "prettier": "^2.7.1",
+    "tslib": "^2.4.1",
+    "tsup": "^6.4.0",
+    "typescript": "^4.8.4"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "packageManager": "yarn@3.2.4"
+}
