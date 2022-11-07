@@ -25,8 +25,7 @@ It also contains copy-pasteable (but not exported) content in:
 Run:
 
 ```sh
-yarn add -D configs@Lioness100/configs
-yarn add -D eslint prettier typescript tsup
+yarn add -D configs@Lioness100/configs eslint prettier typescript tsup
 ```
 
 And configure the individual services like so:

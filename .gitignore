@@ -13,5 +13,3 @@ dist/
 
 # Environment variables
 .env
-
-test
