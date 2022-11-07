@@ -40,7 +40,7 @@ And configure the individual services like so:
 ```ts
 {
     "scripts": {
-        "build": "tsup --config configs/tsup.js"
+        "build": "tsup --config configs/tsup.config.js"
     }
 }
 ```
