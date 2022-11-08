@@ -5,5 +5,6 @@ export default defineConfig({
 	entry: ['src/index.ts', 'src/cli.ts', 'src/test.ts'],
 	format: ['esm'],
 	tsconfig: 'tsconfig.json',
-	sourcemap: true
+	sourcemap: true,
+	target: 'esnext'
 });

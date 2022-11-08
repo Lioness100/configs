@@ -52,6 +52,9 @@ And configure the individual services like so:
 
 ```json
 {
+    "scripts": {
+        "lint": "eslint ."
+    },
     "eslintConfig": {
         "extends": ["./node_modules/configs/.eslintrc.json"]
     }
@@ -67,6 +70,9 @@ And configure the individual services like so:
 
 ```json
 {
+    "scripts": {
+        "format": "prettier --write \"{*,src/**/*}.{json,js,ts}\""
+    },
     "prettier": "configs/prettier"
 }
 ```

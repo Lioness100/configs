@@ -11,6 +11,7 @@
     "importHelpers": true,
     "incremental": true,
     "module": "ESNext",
+    "target": "ESNext",
     "moduleResolution": "node",
     "noEmitHelpers": true,
     "noFallthroughCasesInSwitch": true,
