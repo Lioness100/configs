@@ -1,8 +1,7 @@
 # configs
 
 > Note: This package is incredibly opinionated and I strongly recommend you
-> don't use it. It's also not on npm, because I don't want to change
-> the version and publish every time I change something.
+> don't use it.
 
 This repository exports shareabe & extendable configuration files for the following services:
 
@@ -25,7 +24,7 @@ It also contains copy-pasteable (but not exported) content in:
 Run:
 
 ```sh
-yarn add -D configs@Lioness100/configs eslint prettier typescript tsup
+yarn add -D configs@npm:@lioness100/configs@latest eslint prettier typescript tsup
 ```
 
 And configure the individual services like so:

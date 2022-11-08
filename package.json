@@ -1,19 +1,19 @@
 {
-  "name": "configs",
-  "version": "1.0.4",
+  "name": "@lioness100/configs",
+  "version": "1.0.0",
   "description": "Personal collection of configs for all things configurable",
   "author": "Lioness100",
   "license": "Apache-2.0",
   "types": "index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "tsup.config.js",
     "tsconfig.json",
     ".prettierrc.json",
     ".eslintrc.json"
   ],
-  "scripts": {
-    "prepare": ""
-  },
   "exports": {
     "./tsconfig": "./tsconfig.json",
     "./prettier": "./.prettierrc.json"
