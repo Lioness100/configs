@@ -1,6 +1,6 @@
 {
   "name": "@lioness100/configs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Personal collection of configs for all things configurable",
   "author": "Lioness100",
   "license": "Apache-2.0",
@@ -19,13 +19,13 @@
     "./prettier": "./.prettierrc.json"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.42.0",
-    "@typescript-eslint/parser": "^5.42.0",
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "@typescript-eslint/parser": "^5.42.1",
     "eslint": "^8.27.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-import-resolver-typescript": "^3.5.2",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.4.0",
+    "eslint-plugin-n": "^15.5.1",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-sonarjs": "^0.16.0",
     "eslint-plugin-typescript-sort-keys": "^2.1.0",
