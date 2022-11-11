@@ -18,13 +18,14 @@ It also contains copy-pasteable (but not exported) content in:
 -   [`.editorconfig`](./.editorconfig)
 -   [`.yarnrc.yml`](./.yarnrc.yml) (and [`.yarn/`](./.yarn/))
 -   [`.github/`](./.github/)
+-   [`ecosystem.yml`](./ecosystem.yml/)
 
 ## Usage
 
 Run:
 
 ```sh
-yarn add -D configs@npm:@lioness100/configs@latest eslint prettier typescript tsup
+yarn add -D @lioness100/configs eslint prettier typescript tsup
 ```
 
 And configure the individual services like so:
@@ -38,7 +39,7 @@ And configure the individual services like so:
 ```ts
 {
     "scripts": {
-        "build": "tsup --config configs/tsup.config.js"
+        "build": "tsup --config @lioness100/configs/tsup.config.js"
     }
 }
 ```
@@ -56,7 +57,7 @@ And configure the individual services like so:
         "lint": "eslint ."
     },
     "eslintConfig": {
-        "extends": ["./node_modules/configs/.eslintrc.json"]
+        "extends": ["./node_modules/@lioness100/configs/.eslintrc.json"]
     }
 }
 ```
@@ -73,7 +74,7 @@ And configure the individual services like so:
     "scripts": {
         "format": "prettier --write \"{*,src/**/*}.{json,js,ts}\""
     },
-    "prettier": "configs/prettier"
+    "prettier": "@lioness100/configs/prettier"
 }
 ```
 
@@ -86,7 +87,7 @@ And configure the individual services like so:
 
 ```json
 {
-    "extends": "configs/tsconfig",
+    "extends": "@lioness100/configs/tsconfig",
     "compilerOptions": {
         "outDir": "dist",
         "rootDir": "src"

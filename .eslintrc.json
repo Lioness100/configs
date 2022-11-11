@@ -14,6 +14,7 @@
     "plugin:@typescript-eslint/strict",
     "plugin:n/recommended",
     "plugin:sonarjs/recommended",
+    "plugin:import/recommended",
     "plugin:typescript-sort-keys/recommended",
     "plugin:unicorn/recommended",
     "plugin:prettier/recommended"
@@ -29,11 +30,11 @@
     }
   ],
   "rules": {
+    // "@typescript-eslint/consistent-type-imports": [
+    //   "error",
+    //   { "fixStyle": "separate-type-imports" }
+    // ],
     "@typescript-eslint/consistent-type-exports": "error",
-    "@typescript-eslint/consistent-type-imports": [
-      "error",
-      { "fixStyle": "separate-type-imports" }
-    ],
     "@typescript-eslint/dot-notation": "error",
     "@typescript-eslint/explicit-member-accessibility": "error",
     "@typescript-eslint/method-signature-style": "error",
@@ -91,10 +92,12 @@
     "@typescript-eslint/no-namespace": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/no-redundant-type-constituents": "error",
+    "@typescript-eslint/no-unnecessary-condition": "off",
     "@typescript-eslint/no-unnecessary-qualifier": "error",
     "@typescript-eslint/no-unsafe-argument": "off",
     "@typescript-eslint/no-unsafe-assignment": "off",
     "@typescript-eslint/no-unsafe-member-access": "off",
+    "@typescript-eslint/no-unsafe-return": "off",
     "@typescript-eslint/no-unused-expressions": "error",
     "@typescript-eslint/no-use-before-define": "error",
     "@typescript-eslint/no-useless-empty-export": "error",
