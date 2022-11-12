@@ -39,10 +39,12 @@ And configure the individual services like so:
 ```ts
 {
     "scripts": {
-        "build": "tsup --config @lioness100/configs/tsup.config.js"
+        "build": "tsup --config node_modules/@lioness100/configs/tsup.config.js"
     }
 }
 ```
+
+Add `--define.PROJECT_TYPE bot` or `--define.PROJECT_TYPE cli` if applicable.
 
 </details>
 

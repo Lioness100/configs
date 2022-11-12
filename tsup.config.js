@@ -1,10 +1,26 @@
 import { defineConfig } from 'tsup';
 
-export default defineConfig({
+/**
+ * @param {string} [entry]
+ * @returns {string[]}
+ */
+const resolveEntry = (entry) => {
+	if (entry === 'bot') {
+		return ['src/index.ts', 'src/{commands,preconditions,listeners}/**/*.ts'];
+	}
+
+	if (entry === 'cli') {
+		return ['src/cli.ts'];
+	}
+
+	return ['src/index.ts'];
+};
+
+export default defineConfig((options) => ({
 	clean: true,
-	entry: ['src/index.ts', 'src/cli.ts', 'src/test.ts'],
+	entry: resolveEntry(options.define?.PROJECT_TYPE),
 	format: ['esm'],
 	tsconfig: 'tsconfig.json',
 	sourcemap: true,
 	target: 'esnext'
-});
+}));
