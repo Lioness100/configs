@@ -15,13 +15,14 @@
     "plugin:n/recommended",
     "plugin:sonarjs/recommended",
     "plugin:import/recommended",
+    "plugin:import/typescript",
     "plugin:typescript-sort-keys/recommended",
     "plugin:unicorn/recommended",
     "plugin:prettier/recommended"
   ],
   "overrides": [
     {
-      "files": ["*.js"],
+      "files": ["!src/**"],
       "rules": {
         "import/no-commonjs": "off",
         "import/no-default-export": "off",
@@ -86,7 +87,7 @@
     "@typescript-eslint/no-base-to-string": "off",
     "@typescript-eslint/no-confusing-void-expression": [
       "error",
-      { "ignoreVoidOperator": true }
+      { "ignoreVoidOperator": true, "ignoreArrowShorthand": true }
     ],
     "@typescript-eslint/no-duplicate-imports": "error",
     "@typescript-eslint/no-dynamic-delete": "off",
@@ -114,21 +115,12 @@
     "@typescript-eslint/switch-exhaustiveness-check": "error",
     "import/default": "off",
     "import/first": "error",
-    "import/named": "off",
     "import/namespace": "off",
     "import/newline-after-import": "error",
     "import/no-absolute-path": "error",
     "import/no-amd": "error",
     "import/no-cycle": "error",
     "import/no-default-export": "error",
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": false,
-        "optionalDependencies": false,
-        "peerDependencies": false
-      }
-    ],
     "import/no-mutable-exports": "error",
     "import/no-named-as-default-member": "off",
     "import/no-namespace": "error",
@@ -165,6 +157,7 @@
     "n/prefer-global/url-search-params": "error",
     "n/prefer-promises/dns": "error",
     "n/prefer-promises/fs": "error",
+    "n/shebang": ["error", { "convertPath": {"src/**/*.ts": "dist/$1.js" }}],
     "sonarjs/no-inverted-boolean-check": "error",
     "sonarjs/no-nested-template-literals": "off",
     "typescript-sort-keys/interface": ["error", "asc", { "natural": true }],
