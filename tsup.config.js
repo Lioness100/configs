@@ -6,7 +6,7 @@ import { defineConfig } from 'tsup';
  */
 const resolveEntry = (entry) => {
 	if (entry === 'bot') {
-		return ['src/index.ts', 'src/{commands,preconditions,listeners}/**/*.ts'];
+		return ['src/index.ts', 'src/{commands,preconditions,listeners,interaction-handlers,scheduled-tasks}/**/*.ts'];
 	}
 
 	if (entry === 'cli') {

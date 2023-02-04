@@ -30,10 +30,10 @@
     }
   ],
   "rules": {
-    // "@typescript-eslint/consistent-type-imports": [
-    //   "error",
-    //   { "fixStyle": "separate-type-imports" }
-    // ],
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      { "fixStyle": "inline-type-imports" }
+    ],
     "@typescript-eslint/consistent-type-exports": "error",
     "@typescript-eslint/dot-notation": "error",
     "@typescript-eslint/explicit-member-accessibility": "error",
@@ -47,7 +47,7 @@
         "trailingUnderscore": "forbid"
       },
       {
-        "format": ["camelCase", "UPPER_CASE"],
+        "format": ["camelCase", "UPPER_CASE", "PascalCase"],
         "modifiers": ["const"],
         "selector": "variable"
       },
@@ -59,6 +59,10 @@
         "custom": { "match": false, "regex": "^I[A-Z]" },
         "format": ["PascalCase"],
         "selector": "interface"
+      },
+      {
+        "format": ["camelCase", "PascalCase"],
+        "selector": "objectLiteralProperty"
       },
       {
         "format": null,
@@ -170,7 +174,10 @@
     "unicorn/explicit-length-check": "off",
     "unicorn/filename-case": [
       "error",
-      { "cases": { "camelCase": true, "kebabCase": true, "pascalCase": true } }
+      {
+        "cases": { "camelCase": true, "kebabCase": true, "pascalCase": true },
+        "ignore": ["^[A-Z]+\\."]
+      }
     ],
     "unicorn/import-style": [
       "error",
