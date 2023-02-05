@@ -26,14 +26,15 @@
       "rules": {
         "import/no-commonjs": "off",
         "import/no-default-export": "off",
-        "unicorn/prefer-module": "off"
+        "unicorn/prefer-module": "off",
+        "n/no-unpublished-import": "off"
       }
     }
   ],
   "rules": {
     "@typescript-eslint/consistent-type-imports": [
       "error",
-      { "fixStyle": "inline-type-imports" }
+      { "fixStyle": "inline-type-imports", "disallowTypeAnnotations": false }
     ],
     "@typescript-eslint/consistent-type-exports": "error",
     "@typescript-eslint/dot-notation": "error",
@@ -157,7 +158,8 @@
     "n/prefer-global/url-search-params": "error",
     "n/prefer-promises/dns": "error",
     "n/prefer-promises/fs": "error",
-    "n/shebang": ["error", { "convertPath": {"src/**/*.ts": "dist/$1.js" }}],
+    "n/shebang": ["error", { "convertPath": { "src/**/*.ts": ["^src/(.+?)\\.ts$", "dist/$1.js"] } }],
+    "sonarjs/cognitive-complexity": ["error", 20],
     "sonarjs/no-inverted-boolean-check": "error",
     "sonarjs/no-nested-template-literals": "off",
     "typescript-sort-keys/interface": ["error", "asc", { "natural": true }],
