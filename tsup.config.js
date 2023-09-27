@@ -8,7 +8,7 @@ const resolveEntry = (entry) => {
 	if (entry === 'bot') {
 		return [
 			'src/index.ts',
-			'src/{commands,preconditions,listeners,interaction-handlers,scheduled-tasks,entities}/**/*.ts'
+			'src/{commands,preconditions,listeners,interaction-handlers,scheduled-tasks,lib/entities}/**/*.ts'
 		];
 	}
 
