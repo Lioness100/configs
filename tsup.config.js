@@ -8,6 +8,7 @@ const resolveEntry = (entry) => {
 	if (entry === 'bot') {
 		return [
 			'src/index.ts',
+			'src/bot.ts',
 			'src/mikro-orm.config.ts',
 			'src/{commands,preconditions,listeners,interaction-handlers,scheduled-tasks,lib/entities}/**/*.ts'
 		];
