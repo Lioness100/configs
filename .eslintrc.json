@@ -221,7 +221,7 @@
     "multiline-comment-style": ["error", "separate-lines"],
     "no-alert": "error",
     "no-confusing-arrow": "error",
-    "no-constant-condition": ["error", { "allExceptWhileTrue": true }],
+    "no-constant-condition": "error",
     "no-else-return": "error",
     "no-extra-bind": "error",
     "no-extra-label": "error",
